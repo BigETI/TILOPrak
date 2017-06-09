@@ -49,7 +49,7 @@ member(X, n(Y, Lb, Rb)) :- X\==Y, tree(Lb), tree(Rb), (member(X, Lb); member(X, 
 
 % preorder(Xb, Ys) : Preorder Liste aus Binaerbaum
 % Xb : Binaerbaum
-% Ys : "Xb" in Praeorder
+% Ys : "Xb" in Preorder
 preorder(e, []).
 preorder(n(X, Lb, Rb), [X|Xs]) :- tree(Lb), tree(Rb), preorder(Lb, Y1s), preorder(Rb, Y2s), append(Y1s, Y2s, Xs).
 
